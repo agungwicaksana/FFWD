@@ -1,0 +1,11 @@
+{
+  "name": "submission",
+  "version": "1.0.0",
+  "description": "Submission Fundamental FrontEnd WebDev - Aplikasi Web untuk mencari masakan dari seluruh dunia. Serta memberi rekomendasi masakan untuk dicoba.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Agung Wicaksana <agung.wicaksaana@gmail.com>",
+  "license": "ISC"
+}
