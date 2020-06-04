@@ -1,5 +1,4 @@
 // import "./styles/style.css";
-// import "material-icons/css/material-icons.scss";
 import $ from "jquery";
 import "materialize-css/dist/js/materialize.min";
 
