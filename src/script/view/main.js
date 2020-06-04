@@ -1,8 +1,14 @@
 // import "./styles/style.css";
 import $ from "jquery";
+import "materialize-css/dist/js/materialize.min";
+
+// component
+import "../component/parallax-header.js";
 
 function main() {
-    $('h1').html("agung")
+    $('title').text('Coba TItle')
+    // $('h1').text("agung")
+    
 }
 
 export default main;
