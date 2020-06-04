@@ -21,6 +21,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: "sass-loader"
+                    }
+                ],
+            },
+            {
                 test: /\.html$/,
                 use: ['html-loader']
             },
@@ -33,6 +41,19 @@ module.exports = {
                             name: '[name].[ext]',
                             outputPath: 'img/',
                             publicPath: 'img/'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(svg|eot|woff|ttf|svg|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "[path][name].[ext]",
+                            outputPath: "font/",
+                            publicPath: "font/"
                         }
                     }
                 ]

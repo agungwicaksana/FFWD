@@ -1,7 +1,8 @@
+import "./navbar.js";
+
 class ParallaxHeader extends HTMLElement {
     constructor() {
         super();
-        
     }
     connectedCallback() {
         this.render();
@@ -12,6 +13,11 @@ class ParallaxHeader extends HTMLElement {
         this.innerHTML = `
         <div class="parallax-container">
             <div class="parallax"><img src="img/burritoChicken.jpg"></div>
+            <div class="container">
+                <div class="row">
+                    <my-navbar></my-navbar>
+                </div>
+            </div>  
         </div>
         `
     }
