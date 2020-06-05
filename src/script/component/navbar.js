@@ -1,6 +1,24 @@
 class Navbar extends HTMLElement {
     constructor() {
         super();
+        this.logo = "Cicip.id";
+        this.menu = this.menu();
+    }
+
+    menu() {
+        return [
+            {menu: "Cari Masakan", link: "#cari-masakan"},
+            {menu: "Kategori", link: "#kategori"},
+            {menu: "Rekomendasi", link: "#rekomendasi"}
+        ]
+    }
+
+    menuHtml() {
+        let menuList = "";
+        this.menu.forEach((m,i) => {
+            menuList += `<li><a href="${m.link}">${m.menu}</a></li>\n`;
+        });
+        return menuList;
     }
     
     connectedCallback() {
@@ -12,22 +30,15 @@ class Navbar extends HTMLElement {
         this.innerHTML = `
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Logo</a>
+                    <a href="#!" class="brand-logo">${this.logo}</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                        <li><a href="collapsible.html">Javascript</a></li>
-                        <li><a href="mobile.html">Mobile</a></li>
+                        ${this.menuHtml()}
                     </ul>
                 </div>
             </nav>
-            
             <ul class="sidenav" id="mobile-demo">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+                ${this.menuHtml()}
             </ul>`;
     }
     init() {

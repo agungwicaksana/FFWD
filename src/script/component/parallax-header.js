@@ -1,4 +1,5 @@
 import "./navbar.js";
+import burrito from "../../img/burritoChicken.jpg";
 
 class ParallaxHeader extends HTMLElement {
     constructor() {
@@ -12,7 +13,7 @@ class ParallaxHeader extends HTMLElement {
     render() {
         this.innerHTML = `
         <div class="parallax-container">
-            <div class="parallax"><img src="img/burritoChicken.jpg"></div>
+            <div class="parallax"><img src="${burrito}"></div>
             <div class="container">
                 <div class="row">
                     <my-navbar></my-navbar>
