@@ -1,4 +1,5 @@
 import "./navbar.js";
+import "./search-box.js";
 import burrito from "../../img/burritoChicken.jpg";
 
 class ParallaxHeader extends HTMLElement {
@@ -18,6 +19,7 @@ class ParallaxHeader extends HTMLElement {
                 <div class="row">
                     <my-navbar></my-navbar>
                 </div>
+                <search-box></search-box>
             </div>  
         </div>
         `
