@@ -1,3 +1,5 @@
+import "./kategori.js";
+
 class Navbar extends HTMLElement {
     constructor() {
         super();
@@ -8,8 +10,8 @@ class Navbar extends HTMLElement {
     menu() {
         return [
             {menu: "Cari Masakan", link: "#cari-masakan"},
-            {menu: "Kategori", link: "#kategori"},
-            {menu: "Rekomendasi", link: "#rekomendasi"}
+            {menu: "Rekomendasi", link: "#rekomendasi"},
+            {menu: "Kategori", link: "#kategori"}
         ]
     }
 

@@ -142,3 +142,21 @@ rekomendasi-masakan .card-reveal th,
 rekomendasi-masakan .card-reveal td {
     text-align: center;
 }
+
+/* Kategori */
+
+kategori-masakan  h4 li {
+    list-style: none;
+    display: inline;
+    font-size: 2rem;
+}
+
+kategori-masakan  h4 li a {
+    color: #aaaaaa;
+}
+
+kategori-masakan .card-content, 
+rekomendasi-masakan .card-content 
+{
+    height: 155px;
+}
