@@ -8,7 +8,6 @@ class ParallaxHeader extends HTMLElement {
     }
     connectedCallback() {
         this.render();
-        this.init();
     }
     
     render() {
@@ -22,13 +21,12 @@ class ParallaxHeader extends HTMLElement {
                 <search-box></search-box>
             </div>  
         </div>
-        `
+        `;
+        this.init();
     }
     init() {
-        document.addEventListener('DOMContentLoaded', function() {
-            const elems = document.querySelectorAll('.parallax');
+            const elems = document.querySelector('.parallax');
             M.Parallax.init(elems);
-        });
     }
 }
 

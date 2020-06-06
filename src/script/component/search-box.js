@@ -1,7 +1,6 @@
 class SearchBox extends HTMLElement {
     constructor() {
         super();
-        // this.shadowDOM = this.attachShadow({mode: "open"});
     }
 
     connectedCallback(){
@@ -9,32 +8,34 @@ class SearchBox extends HTMLElement {
     }
 
     set clickEvent(event) {
-        this._clickEvent = event;
-        this.render();
+        // this._clickEvent = event;
+        // this.render();
     }
 
 
     get value() {
-        return this.shadowDOM.querySelector("#searchElement").value;
+        // return this.shadowDOM.querySelector("#searchElement").value;
     }
 
     render() {
+        // Html Element
         this.innerHTML = `
         <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s10 m8 offset-m2 offset-s1">
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">First Name</label>
-                        <i class="material-icons prefix">search</i>
-                    </div>
+            <div class="col s12">
+                <div class="input-field col s10 m9 offset-m1">
+                    <input id="pencarian" type="text" class="">
+                    <label for="pencarian">Cari Masakan</label>
                 </div>
-            </form>
+                <div class="input-field col s2 m1">
+                    <i class="material-icons">search</i>
+                </div>
+            </div>
         </div>
-       `;
-
-        // this.shadowDOM.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
+        `
     }
+
+    // handle button ketika diklik
+    // this.shadowDOM.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent)
 }
 
 customElements.define("search-box", SearchBox);
