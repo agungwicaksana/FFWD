@@ -4,11 +4,12 @@ import "materialize-css/dist/js/materialize.min";
 
 // component
 import "../component/parallax-header.js";
+import "../component/rekomendasi.js";
+import "../data/data-rekomendasi.js";
 
 function main() {
-    $('title').text('Coba TItle')
+    // $('title').text('Coba TItle')
     // $('h1').text("agung")
-    
 }
 
 export default main;

@@ -124,3 +124,16 @@ search-box i.material-icons:hover {
         font-size: 38px;
     }
 }
+
+/* Kategori */
+kategori-masakan ul,
+kategori-masakan li {
+    display: inline-block;
+}
+kategori-masakan li {
+    padding: 10px 15px;
+    margin: 0 20px;
+}
+.kategori-item {
+    border: 1px solid #ffccbc;
+}
