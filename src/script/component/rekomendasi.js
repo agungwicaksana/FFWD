@@ -5,29 +5,50 @@ class Rekomendasi extends HTMLElement {
         super();
     }
 
-    async coba() {
-        const jumlahRekomendasi = 5;
+    async generateMeals() {
+        const jumlahRekomendasi = 4;
         let meals = [];
         for(let i=0;i<jumlahRekomendasi;i++){
             const data = await DataRekomendasi.getMeal()
             meals.push(data[0]);
         }
-        meals.forEach(e => {
-
-            // Ini DATA DARI API
-            // Lanjut menempel data ke HTML
-            console.log(e);
+        // console.log(meals[0]);
+        
+        let elems = [];
+        meals.forEach(meal => {
+            const ingredients = this.ingredients(meal);
+            // console.log(ingredients);
             
+            let ingredientEl = [];
+            ingredients.forEach(ing => {
+                const el = `<tr><td>${ing}</td></tr>`;
+                ingredientEl += el;
+            })
+            elems += this.mealElems(meal, ingredientEl);   
         });
+        this.render(elems);
+    }
+
+    ingredients(meal) {
+        let ingredients = []
+        for(let i=0;i<20;i++){
+            const ingredient = meal[`strIngredient${i +1}`];
+            const measure = meal[`strMeasure${i +1}`];
+            
+            if(ingredient == "" || ingredient == " " || ingredient == null) {
+            } else {
+                ingredients.push(`${ingredient} (${measure})`);
+            }
+        };
+        return ingredients;
     }
 
     connectedCallback() {
-        this.coba();
-        this.render();
+        this.generateMeals();
     }
 
-    render() {
-        this.innerHTML = `
+    render(elems) {
+        return this.innerHTML = `
         <div class="container">
             <div class="row">
                 <div class="col s12">
@@ -35,29 +56,47 @@ class Rekomendasi extends HTMLElement {
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 m4">
-                    
-
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-                        
-
-
-                </div>
+                ${elems}
             </div>
         </div>
         `;
+    }
+
+    mealElems(meal, ingredientEl) {
+        return `
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="${meal.strMealThumb}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        <span>${meal.strMeal}</span><br>
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        <span>${meal.strMeal}</span>
+                        
+                        <br/>
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>${meal.strArea}</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ingredients</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${ingredientEl}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        `
     }
 };
 

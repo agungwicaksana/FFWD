@@ -125,15 +125,20 @@ search-box i.material-icons:hover {
     }
 }
 
-/* Kategori */
-kategori-masakan ul,
-kategori-masakan li {
-    display: inline-block;
+/* Rekomendasi */
+rekomendasi-masakan .card .card-content .card-title {
+    margin-bottom: 18px;
 }
-kategori-masakan li {
-    padding: 10px 15px;
-    margin: 0 20px;
+rekomendasi-masakan .card-reveal i {
+    position: absolute;
+    top: 25px;
+    right: 20px;
 }
-.kategori-item {
-    border: 1px solid #ffccbc;
+rekomendasi-masakan .card-reveal p {
+    margin: 0;
+    font-size: 16px;
+}
+rekomendasi-masakan .card-reveal th,
+rekomendasi-masakan .card-reveal td {
+    text-align: center;
 }
