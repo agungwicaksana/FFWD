@@ -129,6 +129,11 @@ search-box i.material-icons:hover {
 rekomendasi-masakan .card .card-content .card-title {
     margin-bottom: 18px;
 }
+rekomendasi-masakan .card-content i {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
 rekomendasi-masakan .card-reveal i {
     position: absolute;
     top: 25px;
@@ -155,8 +160,8 @@ kategori-masakan  h4 li a {
     color: #aaaaaa;
 }
 
-kategori-masakan .card-content, 
+/* kategori-masakan .card-content, 
 rekomendasi-masakan .card-content 
 {
     height: 155px;
-}
+} */

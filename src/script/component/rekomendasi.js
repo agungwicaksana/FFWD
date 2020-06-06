@@ -1,3 +1,4 @@
+import setSameHeight from "../view/same-height.js";
 import DataRekomendasi from "../data/data-rekomendasi.js"
 
 class Rekomendasi extends HTMLElement {
@@ -11,14 +12,10 @@ class Rekomendasi extends HTMLElement {
         for(let i=0;i<jumlahRekomendasi;i++){
             const data = await DataRekomendasi.getMeal()
             meals.push(data[0]);
-        }
-        // console.log(meals[0]);
-        
+        };
         let elems = [];
         meals.forEach(meal => {
             const ingredients = this.ingredients(meal);
-            // console.log(ingredients);
-            
             let ingredientEl = [];
             ingredients.forEach(ing => {
                 const el = `<tr><td>${ing}</td></tr>`;
@@ -27,6 +24,9 @@ class Rekomendasi extends HTMLElement {
             elems += this.mealElems(meal, ingredientEl);   
         });
         this.render(elems);
+
+        // CSS Same height
+        setSameHeight.setTheHeight('rekomendasi-masakan')
     }
 
     ingredients(meal) {

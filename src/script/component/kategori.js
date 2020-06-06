@@ -1,3 +1,4 @@
+import setSameHeight from "../view/same-height.js";
 import DataKategori from "../data/kategori.js";
 import KategoriMeals from "../data/kategori-meals.js";
 
@@ -39,10 +40,12 @@ class KategoriMasakan extends HTMLElement {
             const kateogri = e.target.textContent;
             document.querySelector('.dropdown-trigger').innerText = kateogri;
             const mealsData = await this.getMeals(kateogri);
-            // console.log(mealsData);
             const rendered = this.kategoriCard(mealsData);
             const cardContainer = document.querySelector('.card-container');
             cardContainer.innerHTML = rendered;
+            
+            // CSS Same height
+            setSameHeight.setTheHeight('kategori-masakan')
         })
     }
 
@@ -85,21 +88,17 @@ class KategoriMasakan extends HTMLElement {
         for(let i=0;i<8;i++) {
             const meal  = meals[i];
             mealsCard += `
-                <div class="col s12 m6 l4 xl3">
-                    
-                
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="${meal.strMealThumb}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">${meal.strMeal}</span>
-                        </div>
+            <div class="col s12 m6 l4 xl3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="${meal.strMealThumb}">
                     </div>
-
-
+                    <div class="card-content">
+                        <span class="card-title">${meal.strMeal}</span>
+                    </div>
                 </div>
-            `
+            </div>
+            `;
         };
         return mealsCard
     }

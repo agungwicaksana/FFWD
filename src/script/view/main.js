@@ -11,6 +11,7 @@ import "../component/kategori.js";
 function main() {
     // $('title').text('Coba TItle')
     // $('h1').text("agung")
+    
 }
 
 export default main;
