@@ -9,9 +9,9 @@ class Navbar extends HTMLElement {
 
     menu() {
         return [
-            {menu: "Cari Masakan", link: "#cari-masakan"},
+            {menu: "Cari Masakan", link: "#header"},
             {menu: "Rekomendasi", link: "#rekomendasi"},
-            {menu: "Kategori", link: "#kategori"}
+            {menu: "Kategori", link: "#kategori-masakan"}
         ]
     }
 

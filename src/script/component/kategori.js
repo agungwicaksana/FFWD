@@ -56,7 +56,7 @@ class KategoriMasakan extends HTMLElement {
 
     render() {
         this.innerHTML = `
-        <div class="container">
+        <div class="container animate__animated animate__fadeInDown">
             <div class="row">
                 <div class="col s12">
                     <h4>Kategori Masakan — 
@@ -88,7 +88,7 @@ class KategoriMasakan extends HTMLElement {
         for(let i=0;i<8;i++) {
             const meal  = meals[i];
             mealsCard += `
-            <div class="col s12 m6 l4 xl3">
+            <div class="col s12 m6 l4 xl3 animate__animated animate__fadeInLeft">
                 <div class="card">
                     <div class="card-image">
                         <img src="${meal.strMealThumb}">

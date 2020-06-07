@@ -9,8 +9,18 @@ import "../data/data-rekomendasi.js";
 import "../component/kategori.js";
 
 function main() {
-    // $('title').text('Coba TItle')
-    // $('h1').text("agung")
+    console.log('halo');
+    // console.log();
+    
+
+    setTimeout(() => {
+        (function initScroll() { 
+            $('html,body').animate({
+                scrollTop: $(window).scrollTop() + 1
+            });
+            console.log('asd')
+        })();
+    }, 1500);
     
 }
 

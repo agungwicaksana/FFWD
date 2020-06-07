@@ -13,7 +13,9 @@ class ParallaxHeader extends HTMLElement {
     render() {
         this.innerHTML = `
         <div class="parallax-container">
-            <div class="parallax"><img src="${burrito}"></div>
+            <div class="parallax">
+                <img src="${burrito}">
+            </div>
             <div class="container">
                 <div class="row">
                     <my-navbar></my-navbar>

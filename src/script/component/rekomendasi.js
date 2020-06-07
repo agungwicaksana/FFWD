@@ -49,7 +49,7 @@ class Rekomendasi extends HTMLElement {
 
     render(elems) {
         return this.innerHTML = `
-        <div class="container">
+        <div class="container animate__animated animate__fadeInUp">
             <div class="row">
                 <div class="col s12">
                     <h4>Rekomendasi Untukmu</h4>
