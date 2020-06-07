@@ -8,6 +8,7 @@ import "../component/rekomendasi.js";
 import "../data/data-rekomendasi.js";
 import "../component/kategori.js";
 import "../component/search-modal.js";
+import "../component/footer.js"
 
 // data
 import CariMakanan from "../data/cari-makanan.js";

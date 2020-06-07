@@ -7,13 +7,6 @@ class SearchBox extends HTMLElement {
         this.render();
     }
 
-    
-
-
-    get value() {
-        // return this.shadowDOM.querySelector("#searchElement").value;
-    }
-
     render() {
         // Html Element
         this.innerHTML = `
@@ -28,11 +21,8 @@ class SearchBox extends HTMLElement {
                 </div>
             </div>
         </div>
-        `
+        `;
     }
-
-    // handle button ketika diklik
-    // this.shadowDOM.querySelector('#searchButtonElement').addEventListener('click', this._clickEvent)
 }
 
 customElements.define("search-box", SearchBox);

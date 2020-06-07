@@ -59,9 +59,10 @@ class KategoriMasakan extends HTMLElement {
         <div class="container animate__animated animate__fadeInDown">
             <div class="row">
                 <div class="col s12">
-                    <h4>Kategori Masakan — 
+                    <h4>Kategori Masakan --  
                         <li><a class='dropdown-trigger' href='#' data-target='kategori'>Pilih Kategori</a></li>
                         <ul id='kategori' class='dropdown-content'></ul>
+                        --
                     </h4>
                 </div>
             </div>
