@@ -7,20 +7,27 @@ import "../component/parallax-header.js";
 import "../component/rekomendasi.js";
 import "../data/data-rekomendasi.js";
 import "../component/kategori.js";
+import "../component/search-modal.js";
+
+// data
+import CariMakanan from "../data/cari-makanan.js";
 
 function main() {
-    console.log('halo');
-    // console.log();
-    
-
     setTimeout(() => {
-        (function initScroll() { 
-            $('html,body').animate({
-                scrollTop: $(window).scrollTop() + 1
-            });
-            console.log('asd')
-        })();
+        (function initScroll() { $('html,body').animate({scrollTop: $(window).scrollTop() + 1});})();
     }, 1500);
+
+    const searchModal = document.querySelector('search-modal');
+    $('search-box i').click(async function(event) {
+        try {
+            event.preventDefault();
+            const keyword = $('#pencarian').val();
+            const makanan = await CariMakanan.getMeal(keyword);
+            searchModal.mealData = makanan;
+        } catch(error) {
+            alert(error)
+        }
+    })
     
 }
 

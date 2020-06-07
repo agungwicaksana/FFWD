@@ -133,12 +133,14 @@ search-box i.material-icons:hover {
 rekomendasi-masakan .card .card-content .card-title {
     margin-bottom: 18px;
 }
-rekomendasi-masakan .card-content i {
+rekomendasi-masakan .card-content i,
+search-modal .card-content i {
     position: absolute;
     bottom: 20px;
     right: 10px;
 }
-rekomendasi-masakan .card-reveal i {
+rekomendasi-masakan .card-reveal i,
+search-modal .card-reveal i {
     position: absolute;
     top: 25px;
     right: 20px;
@@ -169,3 +171,9 @@ rekomendasi-masakan .card-content
 {
     height: 155px;
 } */
+
+
+/* Modals */
+search-modal .modal {
+    width: 75%;
+}

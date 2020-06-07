@@ -7,10 +7,7 @@ class SearchBox extends HTMLElement {
         this.render();
     }
 
-    set clickEvent(event) {
-        // this._clickEvent = event;
-        // this.render();
-    }
+    
 
 
     get value() {
