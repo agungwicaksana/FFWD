@@ -8,4 +8,7 @@ Jika ingin ikut berkontribusi memperbaiki projek ini, silakan buat pull request 
 
 Technolgies: NPM, Webpack, Babel, Materialize.css, Jquery, etc.
 
-Note: Project sudah dipakai dan disubmit dalam submission Dicoding (sudah acc).
+
+Note: 
+1. Jangan lupa lakukan perintah "npm install" untuk mendownload node_modules yang dibutuhkan
+2. Project sudah dipakai dan disubmit dalam submission Dicoding (sudah acc).
