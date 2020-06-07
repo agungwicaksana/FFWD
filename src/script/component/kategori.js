@@ -43,8 +43,6 @@ class KategoriMasakan extends HTMLElement {
             const rendered = this.kategoriCard(mealsData);
             const cardContainer = document.querySelector('.card-container');
             cardContainer.innerHTML = rendered;
-            
-            // CSS Same height
             setSameHeight.setTheHeight('kategori-masakan')
         })
     }

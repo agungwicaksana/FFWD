@@ -130,6 +130,9 @@ search-box i.material-icons:hover {
 }
 
 /* Rekomendasi */
+rekomendasi-masakan {
+    min-height: 441.531px;
+}
 rekomendasi-masakan .card .card-content .card-title {
     margin-bottom: 18px;
 }

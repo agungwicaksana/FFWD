@@ -75,7 +75,6 @@ class SearchModal extends HTMLElement {
         this.init();
     }
     init() {
-        // const elems = document.querySelectorAll('.modal');
         const elem = document.querySelector('#modal1')
         M.Modal.init(elem);
         const instance = M.Modal.getInstance(elem);

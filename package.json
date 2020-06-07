@@ -4,7 +4,7 @@
   "description": "Submission Fundamental FrontEnd WebDev - Aplikasi Web untuk mencari masakan dari seluruh dunia. Serta memberi rekomendasi masakan untuk dicoba.",
   "main": "app.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
   "author": "Agung Wicaksana <agung.wicaksaana@gmail.com>",

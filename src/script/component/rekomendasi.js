@@ -24,9 +24,7 @@ class Rekomendasi extends HTMLElement {
             elems += this.mealElems(meal, ingredientEl);   
         });
         this.render(elems);
-
-        // CSS Same height
-        setSameHeight.setTheHeight('rekomendasi-masakan')
+        setSameHeight.setTheHeight('rekomendasi-masakan');
     }
 
     ingredients(meal) {

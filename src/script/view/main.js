@@ -1,17 +1,13 @@
-// import "./styles/style.css";
 import $ from "jquery";
 import "materialize-css/dist/js/materialize.min";
-
-// component
 import "../component/parallax-header.js";
 import "../component/rekomendasi.js";
 import "../data/data-rekomendasi.js";
 import "../component/kategori.js";
 import "../component/search-modal.js";
-import "../component/footer.js"
-
-// data
+import "../component/footer.js";
 import CariMakanan from "../data/cari-makanan.js";
+import Favicon from "../../img/favicon-32x32.png";
 
 function main() {
     setTimeout(() => {

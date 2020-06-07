@@ -8,7 +8,6 @@ class SearchBox extends HTMLElement {
     }
 
     render() {
-        // Html Element
         this.innerHTML = `
         <div class="row">
             <div class="col s12">
